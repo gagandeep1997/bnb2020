@@ -17,8 +17,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js src/*.js",
     "lint:fix": "eslint src/**/*.js src/*.js --fix",
-    "build:styles": "postcss src/tailwind.css -o src/styles.css", 
-    "prebuild": "yarn build:styles",
+    "build:styles": "postcss src/tailwind.css -o src/styles.css",
+    "prebuild": "NODE_ENV=production yarn build:styles",
     "prestart": "yarn build:styles"
   },
   "eslintConfig": {
@@ -49,9 +49,10 @@
     ]
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
     "autoprefixer": "^9.7.4",
+    "husky": "^4.2.3",
     "postcss-cli": "^7.1.0",
-    "tailwindcss": "^1.2.0",
-    "husky": "^4.2.3"
+    "tailwindcss": "^1.2.0"
   }
 }
