@@ -1,14 +1,13 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import Button from "./components/button";
 
-const App = () => {
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          <code>BnB coming soon...</code>
-        </p>
-      </header>
+    <div className="flex flex-col w-3/4 mx-auto my-12 items-center">
+      <h1>BnB coming soon...</h1>
+      <Button onClick={() => console.log("I was clicked")}>
+        I am a button
+      </Button>
     </div>
   );
 }
